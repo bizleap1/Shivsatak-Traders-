@@ -22,7 +22,7 @@ export default function App() {
         <>
           <Hero setPage={setCurrentPage} />
           <Marquee />
-          <About />
+          <About showLeadership={false} />
           <FeaturedProducts setPage={setCurrentPage} />
           <WhyUs />
         </>

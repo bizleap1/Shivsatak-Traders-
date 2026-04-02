@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function About() {
+export default function About({ showLeadership = true }) {
   return (
     <section id="about" style={s.section} className="res-section-pt">
       <div style={s.container} className="res-container res-grid-1">
@@ -80,12 +80,13 @@ export default function About() {
       </div>
 
       {/* Leadership Section - Premium Redesign */}
-      <div style={s.leadershipWrapper}>
-        <div style={s.leadershipTitle}>OUR LEADERSHIP</div>
-        <div style={s.leadershipGrid}>
-          {[
-            { 
-              name: 'Mr. Ankit Singh', 
+      {showLeadership && (
+        <div style={s.leadershipWrapper}>
+          <div style={s.leadershipTitle}>OUR LEADERSHIP</div>
+          <div style={s.leadershipGrid}>
+            {[
+              { 
+                name: 'Mr. Ankit Singh', 
                 role: 'Chief Executive Officer', 
                 img: '/assets/Ankit singh.jpeg',
                 imgPos: 'top',
@@ -131,6 +132,7 @@ export default function About() {
             ))}
           </div>
         </div>
+      )}
 
     </section>
   );
