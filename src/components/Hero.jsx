@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const vegetables = ['🥦', '🥕', '🥬', '🍅', '🌶️', '🧅', '🥒', '🌽'];
+const variables = ['🥦', '🥕', '🥔', '🧅', '🌶️', '🌽', '🥥', '🌾', '🧄', '🥣'];
 
 export default function Hero({ setPage }) {
   const countRefs = useRef([]);
@@ -8,7 +8,7 @@ export default function Hero({ setPage }) {
   useEffect(() => {
     const counters = [
       { el: countRefs.current[0], target: 15, suffix: '+' },
-      { el: countRefs.current[1], target: 8, suffix: '+' },
+      { el: countRefs.current[1], target: 18, suffix: '+' },
       { el: countRefs.current[2], target: 100, suffix: '%' },
     ];
     counters.forEach(({ el, target, suffix }) => {
@@ -30,7 +30,7 @@ export default function Hero({ setPage }) {
       <div style={heroStyles.bgOverlayLine}></div>
 
       {/* Floating Veggie Icons */}
-      {vegetables.map((v, i) => (
+      {variables.map((v, i) => (
         <span key={i} style={{
           ...heroStyles.floatingVeg,
           left: `${8 + (i * 12)}%`,
@@ -93,8 +93,8 @@ export default function Hero({ setPage }) {
           </div>
           <div style={heroStyles.statDivider} className="res-stat-divider"></div>
           <div style={heroStyles.stat}>
-            <span ref={el => countRefs.current[1] = el} style={heroStyles.statNum}>8+</span>
-            <span style={heroStyles.statLabel}>Vegetable Varieties</span>
+            <span ref={el => countRefs.current[1] = el} style={heroStyles.statNum}>18+</span>
+            <span style={heroStyles.statLabel}>Product Varieties</span>
           </div>
           <div style={heroStyles.statDivider} className="res-stat-divider"></div>
           <div style={heroStyles.stat}>

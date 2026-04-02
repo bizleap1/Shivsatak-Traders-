@@ -2,76 +2,166 @@ import React, { useState } from 'react';
 
 const products = [
   {
-    emoji: '🥦',
-    name: 'Broccoli',
-    category: 'Green Vegetables',
-    desc: 'Farm-fresh broccoli packed with nutrients, exported with careful cold-chain management to preserve quality.',
-    tag: 'Best Seller',
-    color: '#2d6a35',
-    specs: { origin: 'UP, India', grade: 'A / Export', packing: 'Crates / Vacuum', temp: '0-2°C' }
-  },
-  {
-    emoji: '🥕',
-    name: 'Carrots',
-    category: 'Root Vegetables',
-    desc: 'Crisp, sweet carrots sourced from fertile Indian fields. Available in bulk for international buyers.',
-    tag: 'High Demand',
-    color: '#e07b2a',
-    specs: { origin: 'UP, India', grade: 'Premium', packing: 'Mesh Bags / Bags', temp: '1-4°C' }
-  },
-  {
-    emoji: '🍅',
-    name: 'Tomatoes',
-    category: 'Fruit Vegetables',
-    desc: 'Premium quality tomatoes with vibrant color and taste. Suitable for fresh consumption and processing.',
+    emoji: '🥣',
+    name: 'Makhana',
+    category: 'Dry Fruits & Seeds',
+    desc: 'Premium Fox Nuts (Makhana) known for their nutritional value. Processed hygienically for international markets.',
     tag: 'Premium',
-    color: '#c0392b',
-    specs: { origin: 'UP, India', grade: 'Grade 1', packing: 'Plastic Crates', temp: '8-12°C' }
+    color: '#bdc3c7',
+    specs: { origin: 'Bihar, India', grade: 'Handpicked', packing: 'Pouch / Box', temp: 'Dry' }
+  },
+  {
+    emoji: '🥜',
+    name: 'Dry Fruits',
+    category: 'Dry Fruits',
+    desc: 'A curated selection of high-grade cashews, almonds, and walnuts, sourced from the finest growers.',
+    tag: 'High Demand',
+    color: '#a04000',
+    specs: { origin: 'India', grade: 'Specialty', packing: 'Vacuum Pack', temp: 'Cool & Dry' }
   },
   {
     emoji: '🌶️',
-    name: 'Green Chillies',
-    category: 'Spice Vegetables',
-    desc: 'India\'s finest green chillies known for their aroma and heat. A key ingredient in global cuisines.',
-    tag: 'Popular',
-    color: '#27ae60',
-    specs: { origin: 'UP, India', grade: 'High Pungency', packing: 'Gunny Bags', temp: '7-10°C' }
-  },
-  {
-    emoji: '🥬',
-    name: 'Leafy Greens',
-    category: 'Leafy Vegetables',
-    desc: 'Fresh spinach, fenugreek, and more. Hygienically packed and temperature-controlled for long transit.',
-    tag: 'Fresh Daily',
-    color: '#1e8449',
-    specs: { origin: 'UP, India', grade: 'Farm Fresh', packing: 'Corrugated Boxes', temp: '2-5°C' }
-  },
-  {
-    emoji: '🧅',
-    name: 'Onions',
-    category: 'Bulb Vegetables',
-    desc: 'India is among the world\'s top onion producers. We export high-grade varieties in every size grade.',
+    name: 'Spices',
+    category: 'Indian Spices',
+    desc: 'Authentic Indian spices including Turmeric, Cumin, and Cardamom, preserving their natural oils and aroma.',
     tag: 'Top Export',
-    color: '#9b59b6',
-    specs: { origin: 'UP, India', grade: 'Export Quality', packing: 'Mesh / Gunny', temp: 'Ambient' }
+    color: '#e67e22',
+    specs: { origin: 'India', grade: 'Pure / Essential', packing: 'Bulk / Retail', temp: 'Ambient' }
   },
   {
-    emoji: '🥒',
-    name: 'Cucumbers',
-    category: 'Gourd Vegetables',
-    desc: 'Crisp cucumbers with extended shelf life, ideal for both fresh markets and pickling industries.',
-    tag: 'Seasonal',
-    color: '#58d68d',
-    specs: { origin: 'UP, India', grade: 'Prime', packing: 'Crates', temp: '10-12°C' }
+    emoji: '🌾',
+    name: 'Rice',
+    category: 'Food Grains',
+    desc: 'Fine quality Basmati and non-Basmati rice varieties, aged for perfect texture and long grain length.',
+    tag: 'Bulk Export',
+    color: '#f1c40f',
+    specs: { origin: 'UP/Punjab, India', grade: 'Super Fine', packing: 'Bags', temp: 'Dry' }
   },
   {
     emoji: '🌽',
-    name: 'Sweet Corn',
-    category: 'Cereal Vegetables',
-    desc: 'Golden sweet corn full of natural sweetness. Available fresh or frozen for international markets.',
-    tag: 'New',
-    color: '#f1c40f',
-    specs: { origin: 'UP, India', grade: 'Yellow F1', packing: 'Shrink Wrap', temp: '0-4°C' }
+    name: 'Green Millet',
+    category: 'Food Grains',
+    desc: 'Nutritious Bajra (Green Millet) sourced directly from farmers, ideal for health-conscious global markets.',
+    tag: 'Organic',
+    color: '#27ae60',
+    specs: { origin: 'India', grade: 'A-Grade', packing: 'Mesh Bags / Bags', temp: 'Dry' }
+  },
+  {
+    emoji: '🥥',
+    name: 'Coconut',
+    category: 'Fresh Fruits',
+    desc: 'Large, water-rich coconuts and dehydrated copra, sourced from tropical coastal regions for maximum freshness.',
+    tag: 'Premium',
+    color: '#5d4037',
+    specs: { origin: 'Coastal India', grade: 'Export Grade', packing: 'Bags', temp: 'Ambient' }
+  },
+  {
+    emoji: '🧅',
+    name: 'Onion',
+    category: 'Vegetables',
+    desc: 'Quality onions in various size grades, known for their sharp flavor and long-lasting shelf life.',
+    tag: 'Top Export',
+    color: '#9b59b6',
+    specs: { origin: 'India', grade: 'Pink / Red', packing: 'Mesh Bags', temp: 'Well Ventilated' }
+  },
+  {
+    emoji: '🥔',
+    name: 'Potato',
+    category: 'Vegetables',
+    desc: 'Premium table and process-grade potatoes, firm and free from blemishes, ready for global distribution.',
+    tag: 'Standard',
+    color: '#d35400',
+    specs: { origin: 'India', grade: 'Grade A', packing: 'Mesh / Gunny', temp: 'Cool Room' }
+  },
+  {
+    emoji: '🧄',
+    name: 'Garlic',
+    category: 'Vegetables',
+    desc: 'Pungent, high-oil content garlic bulbs, cured and sorted for uniform size and maximum shelf life.',
+    tag: 'Popular',
+    color: '#ecf0f1',
+    specs: { origin: 'India', grade: 'White / Purple', packing: 'Mesh Bags', temp: 'Ambient' }
+  },
+  {
+    emoji: '🌶️',
+    name: 'Green Chilli',
+    category: 'Vegetables',
+    desc: 'Extra spicy and vibrant green chillies, handpicked and temperature-controlled for kitchen-fresh delivery.',
+    tag: 'Fresh Daily',
+    color: '#2ecc71',
+    specs: { origin: 'India', grade: 'High Heat', packing: 'Crates', temp: '7-10°C' }
+  },
+  {
+    emoji: '🫚',
+    name: 'Ginger',
+    category: 'Vegetables',
+    desc: 'Fresh, aromatic ginger with high juice content and minimal fiber, perfect for medicinal and culinary use.',
+    tag: 'Premium',
+    color: '#f39c12',
+    specs: { origin: 'India', grade: 'Washed / Dried', packing: 'Mesh Bags', temp: '10-12°C' }
+  },
+  {
+    emoji: '🥒',
+    name: 'Cucumber',
+    category: 'Vegetables',
+    desc: 'Farm-fresh, hydration-packed cucumbers, harvested daily and shipped with gentle handling.',
+    tag: 'Fresh Daily',
+    color: '#27ae60',
+    specs: { origin: 'India', grade: 'Crisp', packing: 'Crates', temp: '10-12°C' }
+  },
+  {
+    emoji: '🥕',
+    name: 'Carrot',
+    category: 'Vegetables',
+    desc: 'Sweet, vibrant carrots from mineral-rich soils, cleaned and graded for premium export markets.',
+    tag: 'High Demand',
+    color: '#e67e22',
+    specs: { origin: 'India', grade: 'Export Quality', packing: 'Mesh Bags / Bags', temp: '1-4°C' }
+  },
+  {
+    emoji: '🍢',
+    name: 'Okra',
+    category: 'Vegetables',
+    desc: 'Tender, bright green Lady Fingers, packed with care to prevent bruising and maintain freshness.',
+    tag: 'Fresh Daily',
+    color: '#27ae60',
+    specs: { origin: 'India', grade: 'Tender', packing: 'Corrugated Boxes', temp: '7-10°C' }
+  },
+  {
+    emoji: '🥦',
+    name: 'Green Peas',
+    category: 'Vegetables',
+    desc: 'Sweet and plump green peas, available in fresh pods or frozen for year-round availability.',
+    tag: 'Seasonal',
+    color: '#2ecc71',
+    specs: { origin: 'India', grade: 'Grade 1', packing: 'Mesh Bags', temp: '0-5°C' }
+  },
+  {
+    emoji: '🥒',
+    name: 'Bitter Gourd',
+    category: 'Vegetables',
+    desc: 'Fresh Karela with deep medicinal properties and crisp texture, sorted for uniform shape.',
+    tag: 'Standard',
+    color: '#1b4d3e',
+    specs: { origin: 'India', grade: 'Premium', packing: 'Crates', temp: '10-12°C' }
+  },
+  {
+    emoji: '🧊',
+    name: 'Bottle Gourd',
+    category: 'Vegetables',
+    desc: 'Long and fresh Lauki, sourced from chosen farms and handled with extreme care for quality assurance.',
+    tag: 'Standard',
+    color: '#90ee90',
+    specs: { origin: 'India', grade: 'A-Grade', packing: 'Crates', temp: '10-12°C' }
+  },
+  {
+    emoji: '🌽',
+    name: 'Pointed Gourd',
+    category: 'Vegetables',
+    desc: 'Authentic Indian Parwal, favored for its unique taste and nutritional benefits, exported fresh.',
+    tag: 'Specialty',
+    color: '#228b22',
+    specs: { origin: 'India', grade: 'Grade 1', packing: 'Crates', temp: '10-12°C' }
   },
 ];
 
@@ -84,15 +174,31 @@ const tagColors = {
   'Top Export': '#8e44ad',
   'Seasonal': '#16a085',
   'New': '#2980b9',
+  'Bulk Export': '#f39c12',
+  'Organic': '#27ae60',
+  'Standard': '#7f8c8d',
+  'Specialty': '#d35400',
 };
 
 const productPhotos = [
+  '/assets/WhatsApp Image 2026-04-02 at 12.29.02 PM (1).jpeg',
+  '/assets/WhatsApp Image 2026-04-02 at 12.29.02 PM.jpeg',
+  '/assets/WhatsApp Image 2026-04-02 at 12.29.29 PM (1).jpeg',
+  '/assets/WhatsApp Image 2026-04-02 at 12.29.29 PM (2).jpeg',
+  '/assets/WhatsApp Image 2026-04-02 at 12.29.29 PM.jpeg',
+  '/assets/WhatsApp Image 2026-04-02 at 12.30.07 PM.jpeg',
+  '/assets/WhatsApp Image 2026-04-02 at 12.30.08 PM (1).jpeg',
+  '/assets/WhatsApp Image 2026-04-02 at 12.30.08 PM (2).jpeg',
+  '/assets/WhatsApp Image 2026-04-02 at 12.30.08 PM.jpeg',
+  '/assets/WhatsApp Image 2026-04-02 at 12.30.09 PM (1).jpeg',
+  '/assets/WhatsApp Image 2026-04-02 at 12.30.09 PM.jpeg',
+  '/assets/WhatsApp Image 2026-04-02 at 12.30.10 PM (1).jpeg',
+  '/assets/WhatsApp Image 2026-04-02 at 12.30.10 PM.jpeg',
+  '/assets/WhatsApp Image 2026-04-01 at 12.45.02 PM.jpeg',
+  '/assets/WhatsApp Image 2026-04-01 at 12.45.03 PM.jpeg',
+  '/assets/WhatsApp Image 2026-04-01 at 12.45.06 PM.jpeg',
   '/assets/WhatsApp Image 2026-04-01 at 12.45.09 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-01 at 12.45.10 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-01 at 12.45.18 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-01 at 12.45.20 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-01 at 12.45.22 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-01 at 12.45.23 PM.jpeg',
+  '/assets/WhatsApp Image 2026-04-01 at 12.45.10 PM.jpeg'
 ];
 
 export default function Products() {

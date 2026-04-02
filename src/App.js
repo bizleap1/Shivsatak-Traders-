@@ -22,7 +22,6 @@ export default function App() {
           <Hero setPage={setCurrentPage} />
           <Marquee />
           <About />
-          <Products />
           <WhyUs />
         </>
       )}
@@ -37,3 +36,4 @@ export default function App() {
     </div>
   );
 }
+
