@@ -41,7 +41,7 @@ export default function Hero({ setPage }) {
         }}>{v}</span>
       ))}
 
-      <div style={heroStyles.container} className="res-container res-flex-col">
+      <div style={heroStyles.container} className="res-container hero-container">
         <div style={heroStyles.leftContent}>
           <div style={heroStyles.tagline}>
             <span style={heroStyles.taglineDot}></span>
@@ -105,10 +105,22 @@ export default function Hero({ setPage }) {
       </div>
 
       {/* Scroll indicator */}
-      <div style={heroStyles.scrollIndicator}>
+      <div className="hero-scroll-indicator" style={heroStyles.scrollIndicator}>
         <div style={heroStyles.scrollLine}></div>
         <span style={heroStyles.scrollText}>Scroll</span>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .hero-container {
+            padding: 0 20px !important;
+            flex-direction: column !important;
+          }
+          .hero-scroll-indicator {
+            display: none !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

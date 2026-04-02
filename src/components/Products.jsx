@@ -197,7 +197,7 @@ export default function Products() {
       {/* Background */}
       <div style={s.bg}></div>
 
-      <div style={s.container} className="res-container">
+      <div className="products-container" style={s.container}>
         <div style={s.header}>
           <div style={s.label}>OUR PRODUCTS</div>
           <h2 style={s.h2}>
@@ -265,7 +265,7 @@ export default function Products() {
         <div style={s.photoSection}>
           <div style={s.label}>ACTUAL PRODUCE</div>
           <h3 style={s.photoH3}>Visual Quality Check</h3>
-          <div style={s.photoGrid}>
+          <div className="products-photo-grid" style={s.photoGrid}>
             {productPhotos.map((img, i) => (
               <div key={i} style={s.photoBox}>
                 <img src={img} alt={`Produce ${i}`} style={s.photoImg} />
@@ -275,7 +275,7 @@ export default function Products() {
         </div>
 
         {/* Technical Detail Multi-Column */}
-        <div style={s.techDetailSection} className="res-grid-1 res-grid-gap res-p-20">
+        <div className="products-tech-section" style={s.techDetailSection}>
           <div style={s.techCol}>
             <div style={s.techLabel}>GLOBAL QUALITY STANDARDS</div>
             <h4 style={s.techH4}>Strict Compliance & Certification</h4>
@@ -309,7 +309,7 @@ export default function Products() {
         </div>
 
         {/* Bottom CTA */}
-        <div style={s.bottomCta} className="res-flex-col res-p-20">
+        <div className="products-cta" style={s.bottomCta}>
           <p style={s.ctaText}>Interested in bulk export orders or custom requirements?</p>
           <button
             style={s.ctaBtn}
@@ -321,6 +321,29 @@ export default function Products() {
           </button>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .products-container {
+            padding: 0 20px !important;
+          }
+          .products-tech-section {
+            grid-template-columns: 1fr !important;
+            padding: 30px 20px !important;
+            gap: 40px !important;
+            margin-top: 60px !important;
+          }
+          .products-photo-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .products-cta {
+            flex-direction: column !important;
+            text-align: center !important;
+            gap: 20px !important;
+            padding: 30px 20px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

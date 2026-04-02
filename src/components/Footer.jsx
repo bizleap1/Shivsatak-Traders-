@@ -8,8 +8,8 @@ export default function Footer({ setPage }) {
 
   return (
     <footer style={s.footer}>
-      <div style={s.container} className="res-container">
-        <div style={s.top} className="res-grid-1 res-grid-gap">
+      <div className="footer-container" style={s.container}>
+        <div className="footer-top" style={s.top}>
           {/* Brand */}
           <div style={s.brand}>
             <div style={s.logoText}>SHIVASTAK</div>
@@ -74,6 +74,18 @@ export default function Footer({ setPage }) {
           </div>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .footer-container { padding: 0 20px !important; }
+          .footer-top {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 32px !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .footer-top { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </footer>
   );
 }

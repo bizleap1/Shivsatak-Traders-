@@ -56,7 +56,7 @@ export default function WhyUs() {
         </div>
 
         {/* Features Grid */}
-        <div style={s.featureGrid}>
+        <div className="why-feature-grid" style={s.featureGrid}>
           {features.map((f, i) => (
             <div key={f.title} style={s.featureCard}
               onMouseEnter={e => { e.currentTarget.style.background = 'var(--green-deep)'; e.currentTarget.querySelector('.ft').style.color = 'white'; e.currentTarget.querySelector('.fd').style.color = 'rgba(255,255,255,0.65)'; }}
@@ -75,7 +75,7 @@ export default function WhyUs() {
             <div style={s.label}>HOW IT WORKS</div>
             <h3 style={s.processH3}>Our Export Process</h3>
           </div>
-          <div style={s.processGrid}>
+          <div className="why-process-grid" style={s.processGrid}>
             {process.map((p, i) => (
               <div key={p.num} style={s.processStep}>
                 <div style={s.processNum}>{p.num}</div>
@@ -137,6 +137,16 @@ export default function WhyUs() {
         </div>
 
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .why-feature-grid { grid-template-columns: 1fr !important; }
+          .why-process-grid { grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
+        }
+        @media (max-width: 480px) {
+          .why-process-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </section>
   );
 }

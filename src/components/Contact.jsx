@@ -15,7 +15,7 @@ export default function Contact() {
 
   return (
     <section id="contact" style={s.section}>
-      <div style={s.container} className="res-container res-grid-1">
+      <div className="contact-container" style={s.container}>
 
         {/* Left Info Panel */}
         <div style={s.infoPanel}>
@@ -77,7 +77,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} style={s.form}>
               <h3 style={s.formTitle}>Send an Inquiry</h3>
 
-              <div style={s.formRow} className="res-grid-1">
+              <div className="contact-form-row" style={s.formRow}>
                 <div style={s.formGroup}>
                   <label style={s.formLabel}>Full Name *</label>
                   <input
@@ -108,7 +108,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div style={s.formRow} className="res-grid-1">
+              <div className="contact-form-row" style={s.formRow}>
                 <div style={s.formGroup}>
                   <label style={s.formLabel}>Phone Number</label>
                   <input
@@ -176,6 +176,19 @@ export default function Contact() {
         </div>
 
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .contact-container {
+            grid-template-columns: 1fr !important;
+            padding: 0 20px !important;
+            gap: 40px !important;
+          }
+          .contact-form-row {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

@@ -3,7 +3,7 @@ import React from 'react';
 export default function About({ showLeadership = true }) {
   return (
     <section id="about" style={s.section} className="res-section-pt">
-      <div style={s.container} className="res-container res-grid-1">
+      <div className="about-container" style={s.container}>
 
         {/* Left Visual */}
         <div style={s.visual}>
@@ -43,7 +43,7 @@ export default function About({ showLeadership = true }) {
             Under the visionary leadership of <strong>Owner Mr. Anoop Singh</strong> and <strong>CEO Mr. Ankit Singh</strong>, we have built a robust supply chain that connects thousands of local farmers directly to the international market. This direct integration ensures that our produce — from lush green chilies to premium carrots — is harvested and shipped at peak freshness.
           </p>
 
-          <div style={s.infoGrid} className="res-grid-1">
+          <div className="about-info-grid" style={s.infoGrid}>
             <div style={s.infoItem}>
               <div style={s.infoTitle}>Our Vision</div>
               <p style={s.infoText}>To become the most trusted global bridge for Indian agricultural excellence.</p>
@@ -56,7 +56,7 @@ export default function About({ showLeadership = true }) {
 
           <div style={s.pillarsSection}>
             <div style={s.pillarsTitle}>OUR CORE PILLARS</div>
-            <div style={s.pillarsGrid} className="res-grid-1">
+            <div className="about-pillars-grid" style={s.pillarsGrid}>
               {[
                 { t: 'Integrity', d: 'Honesty in every weight and grade.' },
                 { t: 'Quality', d: 'Consistently meeting global food safety norms.' },
@@ -134,6 +134,22 @@ export default function About({ showLeadership = true }) {
         </div>
       )}
 
+      <style>{`
+        @media (max-width: 768px) {
+          .about-container {
+            grid-template-columns: 1fr !important;
+            padding: 0 20px !important;
+            gap: 40px !important;
+          }
+          .about-info-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .about-pillars-grid {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

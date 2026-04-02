@@ -71,7 +71,7 @@ export default function Gallery() {
           ))}
         </div>
 
-        <div style={s.masonry}>
+        <div className="masonry-container" style={s.masonry}>
           {isAnimate && filteredImages.map((img, i) => (
             <div 
               key={`${img.url}-${i}`} 
@@ -140,8 +140,11 @@ export default function Gallery() {
         @media (max-width: 1024px) {
           .masonry-container { column-count: 2 !important; }
         }
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
           .masonry-container { column-count: 1 !important; }
+          .gallery-card .overlay { opacity: 1 !important; background: linear-gradient(to top, rgba(13,43,16,0.8) 0%, transparent 100%) !important; }
+          .gallery-card .overlay div { transform: translateY(0) !important; }
+          .gallery-card .overlayTitle { font-size: 18px !important; }
         }
       `}</style>
     </section>
@@ -216,6 +219,7 @@ const s = {
     columnCount: 3,
     columnGap: '24px',
     width: '100%',
+    transition: 'all 0.3s ease',
   },
   card: {
     position: 'relative',

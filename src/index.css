@@ -25,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -32,6 +33,10 @@ body {
   background-color: var(--cream);
   color: var(--text-dark);
   overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
 }
 
 ::selection {

@@ -16,7 +16,7 @@ const styles = {
   container: {
     maxWidth: '1280px',
     margin: '0 auto',
-    padding: '0 40px',
+    padding: '0 24px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -28,7 +28,7 @@ const styles = {
   },
   logoTop: {
     fontFamily: 'var(--font-display)',
-    fontSize: '26px',
+    fontSize: 'clamp(18px, 5vw, 26px)',
     letterSpacing: '4px',
     color: 'var(--white)',
     lineHeight: 1,
@@ -93,9 +93,10 @@ const styles = {
     display: open ? 'flex' : 'none',
     flexDirection: 'column',
     gap: '0',
-    padding: '16px 40px 24px',
-    background: 'rgba(26, 58, 31, 0.98)',
+    padding: '16px 24px 24px',
+    background: 'rgba(13, 43, 16, 0.99)',
     borderTop: '1px solid rgba(76,175,80,0.2)',
+    zIndex: 999,
   }),
   mobileLink: {
     fontFamily: 'var(--font-body)',
@@ -105,9 +106,10 @@ const styles = {
     textTransform: 'uppercase',
     color: 'rgba(255,255,255,0.85)',
     textDecoration: 'none',
-    padding: '14px 0',
+    padding: '16px 0',
     borderBottom: '1px solid rgba(255,255,255,0.08)',
     cursor: 'pointer',
+    display: 'block',
   },
 };
 
@@ -146,7 +148,7 @@ export default function Navbar({ setPage, currentPage }) {
           </div>
         </div>
 
-        <ul style={{...styles.links, '@media(max-width:768px)': {display:'none'}}}>
+        <ul className="nav-links" style={styles.links}>
           {navLinks.map(link => (
             <li key={link}>
               <a
@@ -174,16 +176,22 @@ export default function Navbar({ setPage, currentPage }) {
           </li>
         </ul>
 
-        <button style={styles.hamburger} onClick={() => setMobileOpen(!mobileOpen)}>
-          <span style={styles.bar}></span>
-          <span style={styles.bar}></span>
-          <span style={styles.bar}></span>
+        <button className="hamburger" style={styles.hamburger} onClick={() => setMobileOpen(!mobileOpen)}>
+          <span style={{...styles.bar, transform: mobileOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none'}}></span>
+          <span style={{...styles.bar, opacity: mobileOpen ? 0 : 1}}></span>
+          <span style={{...styles.bar, transform: mobileOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none'}}></span>
         </button>
       </div>
       <div style={styles.mobileMenu(mobileOpen)}>
         {navLinks.map(link => (
           <a key={link} style={styles.mobileLink} onClick={() => handleNavClick(link)}>{link}</a>
         ))}
+        <button
+          style={{...styles.ctaBtn, marginTop: '20px', width: '100%'}}
+          onClick={() => handleNavClick('Contact')}
+        >
+          Get Quote
+        </button>
       </div>
 
       <style>{`
