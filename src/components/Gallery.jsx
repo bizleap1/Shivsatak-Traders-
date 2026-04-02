@@ -87,8 +87,6 @@ export default function Gallery() {
               <div style={s.imgBox}>
                 <img src={img.url} alt={img.title} style={s.img} loading="lazy" />
                 <div style={s.overlay}>
-                  <div style={s.overlayCategory}>{img.category}</div>
-                  <div style={s.overlayTitle}>{img.title}</div>
                   <div style={s.overlayIcon}>🔍</div>
                 </div>
               </div>
@@ -103,10 +101,7 @@ export default function Gallery() {
           <button style={s.closeBtn}>×</button>
           <div style={s.modalContent} onClick={e => e.stopPropagation()}>
             <img src={selectedImg.url} alt={selectedImg.title} style={s.modalImg} />
-            <div style={s.modalInfo}>
-              <div style={s.modalCat}>{selectedImg.category}</div>
-              <div style={s.modalTitle}>{selectedImg.title}</div>
-            </div>
+
           </div>
         </div>
       )}
@@ -247,22 +242,7 @@ const s = {
     padding: '32px',
     zIndex: 2,
   },
-  overlayCategory: {
-    fontFamily: 'var(--font-body)',
-    fontSize: '11px',
-    fontWeight: '700',
-    letterSpacing: '3px',
-    textTransform: 'uppercase',
-    color: 'var(--green-lime)',
-    marginBottom: '8px',
-  },
-  overlayTitle: {
-    fontFamily: 'var(--font-serif)',
-    fontSize: '28px',
-    fontWeight: '700',
-    color: 'white',
-    lineHeight: 1.2,
-  },
+
   overlayIcon: {
     position: 'absolute',
     top: '32px',
@@ -320,24 +300,5 @@ const s = {
     boxShadow: '0 40px 100px rgba(0,0,0,0.6)',
     objectFit: 'contain',
   },
-  modalInfo: {
-    marginTop: '32px',
-    textAlign: 'center',
-  },
-  modalCat: {
-    fontFamily: 'var(--font-body)',
-    fontSize: '14px',
-    fontWeight: '700',
-    letterSpacing: '6px',
-    textTransform: 'uppercase',
-    color: 'var(--green-lime)',
-    marginBottom: '12px',
-  },
-  modalTitle: {
-    fontFamily: 'var(--font-serif)',
-    fontSize: 'clamp(24px, 4vw, 42px)',
-    fontWeight: '700',
-    color: 'white',
-    letterSpacing: '0.5px',
-  },
+
 };
