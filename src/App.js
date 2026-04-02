@@ -9,6 +9,7 @@ import WhyUs from './components/WhyUs';
 import Contact from './components/Contact';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
+import FeaturedProducts from './components/FeaturedProducts';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -22,6 +23,7 @@ export default function App() {
           <Hero setPage={setCurrentPage} />
           <Marquee />
           <About />
+          <FeaturedProducts setPage={setCurrentPage} />
           <WhyUs />
         </>
       )}

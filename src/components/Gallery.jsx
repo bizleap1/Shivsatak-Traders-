@@ -1,17 +1,24 @@
 import React from 'react';
 
 const images = [
-  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.02 PM.jpeg', title: 'Farm Sourcing', desc: 'Direct sourcing from local organic farms.' },
-  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.03 PM.jpeg', title: 'Quality Inspection', desc: 'Rigorous inspection for export standards.' },
-  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.06 PM.jpeg', title: 'Hygienic Packing', desc: 'Packing in temperature-controlled environments.' },
-  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.09 PM.jpeg', title: 'Fresh Harvest', desc: 'Daily harvest ensuring peak nutritional value.' },
-  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.10 PM.jpeg', title: 'Export Ready', desc: 'Consignments ready for international shipping.' },
-  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.18 PM.jpeg', title: 'Cold Storage', desc: 'Advanced cooling to maintain freshness.' },
-  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.20 PM.jpeg', title: 'Logistics', desc: 'Tailored logistics for global delivery.' },
-  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.22 PM.jpeg', title: 'Processing', desc: 'Clean and efficient produce handling.' },
-  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.23 PM.jpeg', title: 'Our Facility', desc: 'State-of-the-art export center in UP.' },
-  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.30 PM.jpeg', title: 'Bulk Orders', desc: 'Capacity to handle large-scale shipments.' },
-  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.31 PM.jpeg', title: 'Freshness Guaranteed', desc: 'Delivering the best of India to the world.' },
+  { url: '/assets/WhatsApp Image 2026-04-02 at 12.29.02 PM.jpeg', title: 'Premium Red Onions', desc: 'Hand-sorted onions ready for bulk export.' },
+  { url: '/assets/WhatsApp Image 2026-04-02 at 12.29.29 PM.jpeg', title: 'Fresh Garlic Bulbs', desc: 'Cured and graded for maximum shelf life.' },
+  { url: '/assets/WhatsApp Image 2026-04-02 at 12.30.08 PM.jpeg', title: 'Quality Chillies', desc: 'Vibrant green chillies with high pungency.' },
+  { url: '/assets/WhatsApp Image 2026-04-02 at 12.30.09 PM.jpeg', title: 'Ginger Stocks', desc: 'Fresh ginger roots ready for processing.' },
+  { url: '/assets/WhatsApp Image 2026-04-02 at 12.30.10 PM.jpeg', title: 'Vegetable Graded', desc: 'Precision grading for international standards.' },
+  { url: '/assets/WhatsApp Image 2026-04-02 at 12.29.02 PM (1).jpeg', title: 'Bulk Stock', desc: 'Large scale inventory management.' },
+  { url: '/assets/WhatsApp Image 2026-04-02 at 12.29.29 PM (1).jpeg', title: 'Supply Chain', desc: 'Efficient handling and logistics.' },
+  { url: '/assets/WhatsApp Image 2026-04-02 at 12.29.29 PM (2).jpeg', title: 'Sorting Facility', desc: 'Where quality meets precision.' },
+  { url: '/assets/WhatsApp Image 2026-04-02 at 12.30.07 PM.jpeg', title: 'Gourd Selection', desc: 'Fresh local varieties of gourds.' },
+  { url: '/assets/WhatsApp Image 2026-04-02 at 12.30.08 PM (1).jpeg', title: 'Potato Grade A', desc: 'Firm and fresh potatoes for export.' },
+  { url: '/assets/WhatsApp Image 2026-04-02 at 12.30.08 PM (2).jpeg', title: 'Farm Fresh', desc: 'Direct from Indian farms to you.' },
+  { url: '/assets/WhatsApp Image 2026-04-02 at 12.30.09 PM (1).jpeg', title: 'Export Quality', desc: 'Meeting global food safety standards.' },
+  { url: '/assets/WhatsApp Image 2026-04-02 at 12.30.10 PM (1).jpeg', title: 'Crate Packing', desc: 'Standardized packing for safe transit.' },
+  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.02 PM.jpeg', title: 'Field Sourcing', desc: 'Direct sourcing of premium produce.' },
+  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.03 PM.jpeg', title: 'Inspection Point', desc: 'Careful visual check of every item.' },
+  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.06 PM.jpeg', title: 'Temperature Control', desc: 'Maintaining cold chain integrity.' },
+  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.09 PM.jpeg', title: 'Daily Harvest', desc: 'Peak freshness ensured.' },
+  { url: '/assets/WhatsApp Image 2026-04-01 at 12.45.10 PM.jpeg', title: 'Ready to Ship', desc: 'Final consignments for delivery.' },
 ];
 
 export default function Gallery() {

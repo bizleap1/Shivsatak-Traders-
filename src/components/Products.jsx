@@ -181,24 +181,12 @@ const tagColors = {
 };
 
 const productPhotos = [
-  '/assets/WhatsApp Image 2026-04-02 at 12.29.02 PM (1).jpeg',
   '/assets/WhatsApp Image 2026-04-02 at 12.29.02 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-02 at 12.29.29 PM (1).jpeg',
-  '/assets/WhatsApp Image 2026-04-02 at 12.29.29 PM (2).jpeg',
   '/assets/WhatsApp Image 2026-04-02 at 12.29.29 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-02 at 12.30.07 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-02 at 12.30.08 PM (1).jpeg',
-  '/assets/WhatsApp Image 2026-04-02 at 12.30.08 PM (2).jpeg',
   '/assets/WhatsApp Image 2026-04-02 at 12.30.08 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-02 at 12.30.09 PM (1).jpeg',
   '/assets/WhatsApp Image 2026-04-02 at 12.30.09 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-02 at 12.30.10 PM (1).jpeg',
   '/assets/WhatsApp Image 2026-04-02 at 12.30.10 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-01 at 12.45.02 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-01 at 12.45.03 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-01 at 12.45.06 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-01 at 12.45.09 PM.jpeg',
-  '/assets/WhatsApp Image 2026-04-01 at 12.45.10 PM.jpeg'
+  '/assets/WhatsApp Image 2026-04-01 at 12.45.02 PM.jpeg'
 ];
 
 export default function Products() {
