@@ -40,7 +40,7 @@ export default function About({ showLeadership = true }) {
             <strong>SHIVASTAK TRADERS</strong> is an emerging global export powerhouse headquartered in <strong>Prayagraj, Uttar Pradesh</strong>. Uttar Pradesh is renowned as India's agricultural hub, blessed with fertile Indo-Gangetic plains and a tradition of farming excellence.
           </p>
           <p style={s.para}>
-            Under the visionary leadership of <strong>Owner Mr. Anoop Singh</strong> and <strong>CEO Mr. Ankit Singh</strong>, we have built a robust supply chain that connects thousands of local farmers directly to the international market. This direct integration ensures that our produce — from lush green chilies to premium carrots — is harvested and shipped at peak freshness.
+            Under the visionary leadership of <strong>Owner Mr. Anoop Kumar Singh</strong> and <strong>CEO Mr. Ankit Singh</strong>, we have built a robust supply chain that connects thousands of local farmers directly to the international market. This direct integration ensures that our produce — from lush green chilies to premium carrots — is harvested and shipped at peak freshness.
           </p>
 
           <div className="about-info-grid" style={s.infoGrid}>
@@ -86,20 +86,20 @@ export default function About({ showLeadership = true }) {
           <div style={s.leadershipGrid}>
             {[
               { 
+                name: 'Mr. Anoop Kumar Singh', 
+                role: 'Owner & Founder', 
+                img: '/assets/anoop singh copy.jpeg',
+                imgPos: 'top',
+                tags: ['Visionary', 'Sourcing Strategy', 'Agriculture Hub'],
+                bio: 'With over 20 years of expertise in Indian agriculture, Mr. Anoop Kumar Singh founded Shivastak Traders to bridge the gap between rural farmers and global markets, ensuring fair-trade and absolute freshness.' 
+              },
+              { 
                 name: 'Mr. Ankit Singh', 
                 role: 'Chief Executive Officer', 
-                img: '/assets/Ankit singh.jpeg',
+                img: '/assets/ankit singh copy.jpeg',
                 imgPos: 'top',
                 tags: ['Global Logistics', 'Supply Chain', 'Operations'],
                 bio: 'A strategic leader focused on digital transformation and operational excellence, Mr. Ankit Singh ensures that every consignment meets international phytosanitary standards and is delivered with 100% efficiency.' 
-              },
-              { 
-                name: 'Mr. Anoop Singh', 
-                role: 'Owner & Founder', 
-                img: '/assets/Anoop singh.jpeg',
-                imgPos: 'top',
-                tags: ['Visionary', 'Sourcing Strategy', 'Agriculture Hub'],
-                bio: 'With over 20 years of expertise in Indian agriculture, Mr. Anoop Singh founded Shivastak Traders to bridge the gap between rural farmers and global markets, ensuring fair-trade and absolute freshness.' 
               },
             ].map((leader) => (
               <div key={leader.name} style={s.leaderCard}

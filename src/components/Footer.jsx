@@ -70,7 +70,7 @@ export default function Footer({ setPage }) {
             © 2024 SHIVASTAK TRADERS. All Rights Reserved.
           </div>
           <div style={s.bottomRight} className="res-text-center">
-            Owner: Mr. Anoop Singh &nbsp;|&nbsp; CEO: Mr. Ankit Singh
+            Owner: Mr. Anoop Kumar Singh &nbsp;|&nbsp; CEO: Mr. Ankit Singh
           </div>
         </div>
       </div>
