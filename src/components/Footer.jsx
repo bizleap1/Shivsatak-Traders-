@@ -67,7 +67,8 @@ export default function Footer({ setPage }) {
         {/* Bottom */}
         <div style={s.bottom} className="res-flex-col-center res-text-center">
           <div style={s.bottomLeft}>
-            © 2024 SHIVASTAK TRADERS. All Rights Reserved.
+            © 2024 SHIVASTAK TRADERS. All Rights Reserved.<br />
+            Developed and Managed by <a href="https://bizleap.in/" style={{ color: 'var(--green-lime)', textDecoration: 'underline', fontWeight: 'bold' }} target="_blank" rel="noopener noreferrer">BIZLEAP</a>
           </div>
           <div style={s.bottomRight} className="res-text-center">
             Owner: Mr. Anoop Kumar Singh &nbsp;|&nbsp; CEO: Mr. Ankit Singh
